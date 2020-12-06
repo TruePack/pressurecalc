@@ -27,12 +27,6 @@ def configure_window() -> tk.Tk:
     return window
 
 
-def configure_canvas(window: tk.Tk) -> None:
-    figure = pyplot.figure(1)
-    plot_widget = FigureCanvasTkAgg(figure, master=window).get_tk_widget()
-    plot_widget.grid(row=1, column=0)
-
-
 def create_button(window: tk.Tk, pressure: PressureSlave,
                   frequency: FrequencySlave):
     button = tk.Button(
@@ -41,16 +35,6 @@ def create_button(window: tk.Tk, pressure: PressureSlave,
                                                       frequency))
     button.place(x=5, y=5, width=200, height=40)
     button.bind("<Button-1>")
-
-
-def setup():
-    window = configure_window()
-    create_button(window)
-    configure_canvas(window)
-    pressure = PressureSlave()
-    frequency = FrequencySlave()
-    window.mainloop()
-    get_pressure_and_show_graphic(window, pressure, frequency)
 
 
 if __name__ == '__main__':
