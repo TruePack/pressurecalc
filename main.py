@@ -1,12 +1,11 @@
+import matplotlib
+import tkinter as tk
+from matplotlib import pyplot
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+
+from flows.base_flows import get_pressure_and_show_graphic
 from slaves.frequency import Client as FrequencySlave
 from slaves.pressure import Client as PressureSlave
-from measures.frequency import start_engine_and_getting_pressure
-from matplotlib import pyplot
-from random import random
-import tkinter as tk
-from flows.base_flows import get_pressure_and_show_graphic
-import matplotlib
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 
 def main():

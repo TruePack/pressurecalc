@@ -1,9 +1,7 @@
-import tkinter as tk
-from datetime import datetime
 from time import sleep
 
+import tkinter as tk
 from matplotlib import pyplot
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 from graphics.base import create_figure, create_tk_widget
 from slaves.frequency import Client as FrequencySlave
