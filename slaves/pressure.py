@@ -1,6 +1,6 @@
 import minimalmodbus
 from utils import hex_to_dec
-from typing import List
+import random
 
 
 class Client:
@@ -24,14 +24,16 @@ class Client:
         self.instrument = instrument
 
     def get_pressure(self) -> float:
-        pressure: float = self.instrument.read_float(hex_to_dec("0x0013"))
+        # pressure: float = self.instrument.read_float(hex_to_dec("0x0013"))
+        pressure = random.random()
         return pressure
 
     def get_pressure_unit(self) -> str:
-        pressure_unit = self.instrument.read_register(hex_to_dec("0x0015"))
-        huminized_pressure_unit = self.PRESSURE_UNIT_MAP[pressure_unit]
+        # pressure_unit = self.instrument.read_register(hex_to_dec("0x0015"))
+        huminized_pressure_unit = self.PRESSURE_UNIT_MAP[1]
         return huminized_pressure_unit
 
     def get_temperature(self) -> float:
-        temperature: float = self.instrument.read_float(hex_to_dec("0x0011"))
+        temperature = random.random()
+        # temperature: float = self.instrument.read_float(hex_to_dec("0x0011"))
         return temperature

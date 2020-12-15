@@ -11,4 +11,3 @@ def start_engine_and_getting_pressure(frequency: FrequencySlave,
     frequency.set_frequency(5000)
     while True:
         print(pressure.get_pressure())
-        sleep(1)

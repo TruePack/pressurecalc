@@ -9,12 +9,12 @@ from slaves.pressure import Client as PressureSlave
 
 
 def get_pressure_and_show_graphic(window: tk.Tk, pressure: PressureSlave,
-                                  frequency: FrequencySlave):
+                                  frequency: FrequencySlave, gcf=pyplot.gcf()):
     f_values = []
     p_values = []
     figure = create_figure()
     create_tk_widget(figure, window)
-    pyplot.gcf()
+    gcf
     frequency.set_frequency(10)
     # Measure count
     for x in range(5000):
@@ -27,7 +27,5 @@ def get_pressure_and_show_graphic(window: tk.Tk, pressure: PressureSlave,
         pyplot.grid(True)
         pyplot.plot(f_values, p_values, 'r')
         figure.canvas.draw()
-
-        sleep(1)
 
 
