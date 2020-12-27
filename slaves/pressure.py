@@ -16,11 +16,11 @@ class Client:
     }
 
     def __init__(self):
-        instrument = minimalmodbus.Instrument("COM3", 60,
-                                              close_port_after_each_call=True)
-        instrument.serial.timeout = 3
-        instrument.serial.baudrate = 9600
-
+        # instrument = minimalmodbus.Instrument("COM3", 60,
+        #                                       close_port_after_each_call=True)
+        # instrument.serial.timeout = 3
+        # instrument.serial.baudrate = 9600
+        instrument = None
         self.instrument = instrument
 
     def get_pressure(self) -> float:
