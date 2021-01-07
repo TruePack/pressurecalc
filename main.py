@@ -1,7 +1,6 @@
-import matplotlib
 import tkinter as tk
-from matplotlib import pyplot
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+
+import matplotlib
 
 from flows.base_flows import get_pressure_and_show_graphic
 from slaves.frequency import Client as FrequencySlave

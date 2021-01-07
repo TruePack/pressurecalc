@@ -14,10 +14,9 @@ def get_pressure_and_show_graphic(window: tk.Tk, pressure: PressureSlave,
     p_values = []
     figure = create_figure()
     create_tk_widget(figure, window)
-    gcf
     frequency.set_frequency(10)
     # Measure count
-    for x in range(5000):
+    for x in range(10):
         x += 1000
         frequency.set_frequency(x)
         frequency_value = frequency.get_frequency()

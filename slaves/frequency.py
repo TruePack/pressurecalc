@@ -7,6 +7,8 @@ FREQUENCY = random.random()
 
 
 class Client:
+    FREQUENCY = random.random()
+
     def __init__(self):
         # instrument = minimalmodbus.Instrument('COM3', 49,
         #                                       close_port_after_each_call=True)
@@ -17,7 +19,7 @@ class Client:
 
     def get_frequency(self) -> int:
         # frequency = self.instrument.read_register(2)
-        frequency = FREQUENCY
+        frequency = self.FREQUENCY
         return frequency
 
     def run_forward(self):
@@ -46,7 +48,7 @@ class Client:
             # self.instrument.write_register(107, 1000)
         except Exception:
             pass
-        FREQUENCY = value
+        self.FREQUENCY = value
         return
 
     def set_speed_up(self, value_for_up: int) -> None:
