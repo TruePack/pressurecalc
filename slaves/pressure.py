@@ -15,8 +15,8 @@ class Client:
         7: "psi",
     }
 
-    def __init__(self):
-        # instrument = minimalmodbus.Instrument("COM3", 60,
+    def __init__(self, address=60):
+        # instrument = minimalmodbus.Instrument("COM3", address,
         #                                       close_port_after_each_call=True)
         # instrument.serial.timeout = 3
         # instrument.serial.baudrate = 9600
